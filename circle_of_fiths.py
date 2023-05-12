@@ -17,7 +17,7 @@ class CircleOfFifths:
     def __init__(self):
         base_note = Note('C4', quarterLength=4)
         self.notes = [base_note]
-        for i in range(6):
+        for _ in range(6):
             new_note = base_note.transpose('P5')
             while new_note.octave > 4:
                 new_note = new_note.transpose('P-8')
@@ -25,7 +25,7 @@ class CircleOfFifths:
             base_note = new_note
         base_note = Note('D4-', quarterLength=4)
         self.notes.append(base_note)
-        for i in range(4):
+        for _ in range(4):
             new_note = base_note.transpose('P5')
             while new_note.octave > 4:
                 new_note = new_note.transpose('P-8')
